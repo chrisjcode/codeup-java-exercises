@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ConsoleExercises {
     public static void main(String[] args) {
         double pi = 3.14159;
-        System.out.printf("The value of pi is approximately %f \n", pi);
+        System.out.printf("The value of pi is approximately %.2f \n", pi);
 //        System.out.format("The value of pi is approximately " + pi);
 
 //Exception in thread if you enter a string
@@ -17,14 +17,12 @@ public class ConsoleExercises {
 //        String input1 = scanner.next();
 //        String input2 = scanner.next();
 //        String input3 = scanner.next();
-//        System.out.println(input1 + input2 + input3);
+//        System.out.printf("The words you entered are: $s %n %s %n %s %n",input1, input2, input3);
 //
 //
-//        System.out.println("Enter three words");
-//        String input1 = scanner.nextLine();
-//        String input2 = scanner.nextLine();
-//        String input3 = scanner.nextLine();
-//        System.out.println(input1 + input2 + input3);
+//        System.out.println("Enter a sentence");
+//        String sentence = scanner.nextLine();
+//        System.out.printf("Here is your sentence: %n %s%n",sentence);
 
 //Get perimeter
         System.out.println("Enter the length");
