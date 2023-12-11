@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HelloWorld {
     public static void main(String[] args) {
 //        System.out.println("Hello, World!");
@@ -101,6 +103,26 @@ public class HelloWorld {
 //        Hint: Integer.MAX_VALUE is a class constant (we'll learn more about these later) that holds the maximum value for the int type.
 
 //        You cant do this youll get an error
+        String name = "Chris";
+        String greetings = "Salutations";
+//        System.out.printf("Hello %s", name);
+
+
+        System.out.printf("Hello %s, %s", greetings, name);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter something");
+//        String userInput = scanner.next();
+
+//        System.out.println(userInput);
+//
+//        System.out.println("You entered: --> \"" + userInput + "\" <--");
+
+        String userInputLine = scanner.nextLine();
+
+        System.out.println(userInputLine);
+
+        System.out.println("You entered: --> \"" + userInputLine + "\" <--");
     }
 
 }
