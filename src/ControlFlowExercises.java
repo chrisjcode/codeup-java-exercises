@@ -69,11 +69,11 @@ public class ControlFlowExercises {
 
         for (int lRedo = 2; lRedo <= 1000000; lRedo *= 2) {
             System.out.println(lRedo);
-            if (lRedo < 1000000) {
+            if ((lRedo *= 2) > 1000000) {
                 System.out.println("Do While Exponents is done.");
             }
         }
-
+//Fizzbuzz
 
         for (int m = 0; m <= 100; m++) {
             if (m % 3 == 0 && m % 5 == 0) {
@@ -86,5 +86,40 @@ public class ControlFlowExercises {
 
         }
 
+        exponentTables(6);
+        System.out.println(displayLetterGrade(40));
+    }
+
+    public static void exponentTables(long finalNumber) {
+        String tableHeader = "number   |   squared   |   cubed\n";
+        String tableBottomBorder = "-----------------------------------\n";
+        String tableBody = "";
+        String fullTable = "";
+        fullTable = fullTable.concat(tableHeader).concat(tableBottomBorder);
+        for (long counter = 1; counter <= finalNumber; counter++) {
+            long squared = counter * 2;
+            long cubed = counter * 3;
+            String tableBodyRow = String.format("%d        | %d           | %d       \n", counter, squared, cubed);
+            tableBody = tableBody.concat(tableBodyRow);
+        }
+        fullTable = fullTable.concat(tableBody);
+        System.out.println(fullTable);
+    }
+
+    public static String displayLetterGrade(int grade) {
+//        needed this first condition to set a high max range
+        if (grade < 0 || grade > 100) {
+            return "Bro that's not a real grade!";
+        } else if (grade >= 90) {
+            return "A";
+        } else if (grade >= 80) {
+            return "C";
+        } else if (grade >= 70) {
+            return "C";
+        } else if (grade >= 60) {
+            return "D";
+        } else {
+            return "F";
+        }
     }
 }
