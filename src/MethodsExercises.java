@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class MethodsExercises {
     public static void main(String[] args) {
@@ -11,7 +12,9 @@ public class MethodsExercises {
 
 //        getInteger(1, 10);
 
-        factorial(1, 10);
+//        factorial(1, 10);
+
+        shootingDice();
     }
 
     public static long addition(long num1, long num2) {
@@ -69,5 +72,22 @@ public class MethodsExercises {
         }
 
         return factorial(min, max);
+    }
+
+    public static void shootingDice() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Wanna roll some dice [y/n]?");
+        String userInput = sc.next();
+        if (userInput.equalsIgnoreCase("y")) {
+            System.out.println("Ok! How many sides are on this dice?");
+            int sidesInput = sc.nextInt();
+            double roll1 = Math.random() * (sidesInput - 1) + 1;
+            double roll2 = Math.random() * (sidesInput - 1) + 1;
+            System.out.printf("Roll 1 is %f.0F, and Roll 2 is %f.0F", roll1, roll2);
+            return;
+        } else if (userInput.equalsIgnoreCase("n")) {
+            return;
+        }
+        shootingDice();
     }
 }
