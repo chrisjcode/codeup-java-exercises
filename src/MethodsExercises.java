@@ -81,13 +81,19 @@ public class MethodsExercises {
         if (userInput.equalsIgnoreCase("y")) {
             System.out.println("Ok! How many sides are on this dice?");
             int sidesInput = sc.nextInt();
-            double roll1 = Math.random() * (sidesInput - 1) + 1;
-            double roll2 = Math.random() * (sidesInput - 1) + 1;
-            System.out.printf("Roll 1 is %f.0F, and Roll 2 is %f.0F", roll1, roll2);
+            int roll1 = (int) (Math.random() * (sidesInput - 1) + 1);
+            int roll2 = (int) (Math.random() * (sidesInput - 1) + 1);
+            System.out.printf("Roll 1 is %d, and Roll 2 is %d", roll1, roll2);
             return;
         } else if (userInput.equalsIgnoreCase("n")) {
             return;
         }
         shootingDice();
     }
+
+//    5. Game Development
+
+
+
+
 }
